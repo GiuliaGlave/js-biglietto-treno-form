@@ -1,27 +1,44 @@
-const Km = parseInt(prompt('Inserisci distanza in Km'));
-const age = parseInt(prompt('Inserisci età anagrafica'));
-const StandardPrice = Km * 0.21;
+const obtain = document.getElementById('btn-obtain');
+obtain.addEventListener(
 
-let Price
+    "click",
+    function () {
 
-/* ISTRUZIONI CONDIZIONALI */
-if (age < 18) {
+        /* DICHIARAZIONE VARIABILI */
+        const userName = document.getElementById("name").value;
+        const km = parseInt(document.getElementById('km').value);
+        const age = parseInt(document.getElementById('age').value);
 
-    Price = (StandardPrice - (StandardPrice * 20 / 100));
+        const standardPrice = km * 0.21;
+        let price;
 
-} else if (age > 65) {
+        if (!isNaN(km)) {
 
-    Price = (StandardPrice - (StandardPrice * 40 / 100));
+            if (age == "Minorenne") {
 
-} else {
+                price = (standardPrice - (standardPrice * .2));
 
-    Price = StandardPrice;
+            } else if (age == "Over 65") {
 
-}
+                price = (standardPrice - (standardPrice * .4));
 
-/* DECIMALI */
-Price = Price.toFixed(2);
-console.log(Price);
+            } else {
 
-/* TOTALE */
-document.getElementById('total').innerHTML = `TOTALE BIGLIETTO: ${Price} €`;
+                price = standardPrice;
+
+            }
+        }
+
+        else {
+            alert('inserire un valore numerico per i km')
+        }
+
+        /* DECIMALI */
+        price = price.toFixed(2);
+        console.log(price);
+
+        /* TOTALE */
+        document.getElementById('total').innerHTML = `TOTALE BIGLIETTO: ${price} €`;
+    }
+)
+
