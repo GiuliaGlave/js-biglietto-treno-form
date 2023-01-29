@@ -19,78 +19,88 @@
 <body>
 
     <header>
-        <h1>CALCOLA IL PREZZO DEL TUO BIGLIETTO</h1>
+        
     </header>
 
-    <main>
+    <main class="bg-danger">
 
-        <section class="calculator">
+        <section class="calculator p-4">
 
-            <form action="#" class="row row-cols-3">
+            <div id="title" class="text-center ">
+                <h1>CALCOLA IL PREZZO DEL TUO BIGLIETTO</h1>
+            </div>
+
+            <div class="bg-light">
+                <form action="#" class="row row-cols-3 justify-content-center">
                 
-                <div class="col">
-                    <label>Nome Cognome</label>
-                    <input type="text" id="name" class="border-1">
-                </div>
-
-                <div class="col">
-                    <label>Km da percorrere</label>
-                    <input type="number" id="km" class="border-1" value="">
-                </div>
-
-                <div class="col">
-                    <label>Fascia d'età</label>
-                    <select id="age">
-                        <option value="maggiorenne">Maggiorenne</option>
-                        <option value="minorenne">Minorenne</option>
-                        <option value="over-65">Over 65 anni</option>
-                    </select>
-                </div>
-
-            </form>
-
-            <div class="row row-cols-2">
-                <div>
-                    <button type="button" id="btn-obtain">Genera</button>
-                </div>
-
-                <div>
-                    <button id="btn-cancel">Annulla</button>
+                    <div class="col col-auto text-center d-flex flex-column">
+                        <label>Nome Cognome</label>
+                        <input type="text" id="name" class="border-1">
+                    </div>
+                
+                    <div class="col col-auto text-center d-flex flex-column">
+                        <label>Km da percorrere</label>
+                        <input type="number" id="km" class="border-1" value="">
+                    </div>
+                
+                    <div class="col col-auto text-center d-flex flex-column">
+                        <label>Fascia d'età</label>
+                        <select id="age" class="d-block">
+                            <option value="maggiorenne">Maggiorenne</option>
+                            <option value="minorenne">Minorenne</option>
+                            <option value="over-65">Over 65 anni</option>
+                        </select>
+                    </div>
+                
+                </form>
+                
+                <div class="row row-cols-2 text-center justify-content-center">
+                    <div class="col col-auto">
+                        <button type="button" id="btn-obtain">Genera</button>
+                    </div>
+                
+                    <div class="col col-auto">
+                        <button id="btn-cancel">Annulla</button>
+                    </div>
                 </div>
             </div>
+            
+
         </section>
 
-        <section class="ticket-generated">
+        <section class="ticket-generated p-4">
 
-            <h1>IL TUO BIGLIETTO</h1>
-
-            <div>
+            <div id="title" class="text-center">
+                <h1>IL TUO BIGLIETTO</h1>
+            </div>
+            
+            <div class="bg-light p-3">
                 <h2>DETTAGLIO PASSEGGERI</h2>
 
-                <div class="row row-cols-5">
+                <div class="row row-cols-5 bg-light justify-content-between">
 
-                    <div class="col">
-                        <h2>NOME PASSEGGERO</h2>
+                    <div class="col col-4 bg-secondary d-flex flex-column">
+                        <span>NOME PASSEGGERO</span>
                         <span id="name">Jon Snow</span>
                     </div>
 
-                    <div class="col">
-                        <h3>Offerta</h3>
+                    <div class="col col-auto d-flex flex-column">
+                        <span>Offerta</span>
                         <span id="ticket-type"></span>
                     </div>
 
-                    <div class="col">
-                        <h3>Carrozza</h3>
+                    <div class="col col-auto d-flex flex-column">
+                        <span>Carrozza</span>
                         <span id="train-carriage">0</span>
                     </div>
 
-                    <div class="col">
-                        <h3>Codice CP</h3>
+                    <div class="col col-auto d-flex flex-column">
+                        <span>Codice CP</span>
                         <span id="cp-code">92911</span>
                     </div>
 
-                    <div class="col">
-                        <h3>Costo biglietto</h3>
+                    <div class="col col-auto d-flex flex-column">
+                        <span>Costo biglietto</span>
                         <span id="total"></span>
                     </div>
 
