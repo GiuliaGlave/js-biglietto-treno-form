@@ -12,7 +12,7 @@
         integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
         crossorigin="anonymous"></script>
 
-
+    <link rel="stylesheet" href="./style.css">
     <script type="text/javascript" src="./script.js" defer></script>
 </head>
 
@@ -22,7 +22,7 @@
         
     </header>
 
-    <main class="bg-danger">
+    <main>
 
         <section class="calculator p-4">
 
@@ -30,22 +30,23 @@
                 <h1>CALCOLA IL PREZZO DEL TUO BIGLIETTO</h1>
             </div>
 
-            <div class="bg-light">
-                <form action="#" class="row row-cols-3 justify-content-center">
+            <!-- calcolatore -->
+            <div id="container" class="bg-light rounded shadow py-4">
+                <form action="#" class="row row-cols-3 pb-4 g-5 justify-content-center">
                 
                     <div class="col col-auto text-center d-flex flex-column">
                         <label>Nome Cognome</label>
-                        <input type="text" id="name" class="border-1">
+                        <input type="text" id="name" class="border-1 rounded">
                     </div>
                 
                     <div class="col col-auto text-center d-flex flex-column">
                         <label>Km da percorrere</label>
-                        <input type="number" id="km" class="border-1" value="">
+                        <input type="number" id="km" class="border-1 rounded" value="">
                     </div>
                 
                     <div class="col col-auto text-center d-flex flex-column">
                         <label>Fascia d'età</label>
-                        <select id="age" class="d-block">
+                        <select id="age" class="d-block rounded">
                             <option value="maggiorenne">Maggiorenne</option>
                             <option value="minorenne">Minorenne</option>
                             <option value="over-65">Over 65 anni</option>
@@ -56,11 +57,11 @@
                 
                 <div class="row row-cols-2 text-center justify-content-center">
                     <div class="col col-auto">
-                        <button type="button" id="btn-obtain">Genera</button>
+                        <button type="button"  id="btn-obtain">Genera</button>
                     </div>
                 
                     <div class="col col-auto">
-                        <button id="btn-cancel">Annulla</button>
+                        <button  id="btn-cancel">Annulla</button>
                     </div>
                 </div>
             </div>
@@ -74,33 +75,36 @@
                 <h1>IL TUO BIGLIETTO</h1>
             </div>
             
-            <div class="bg-light p-3">
-                <h2>DETTAGLIO PASSEGGERI</h2>
+            <!-- biglietto -->
+            <div id="container" class="bg-light p-4">
+                <div>
+                    <h2 class="fs-4 fw-bold">DETTAGLIO PASSEGGERI</h2>
+                </div>
+                
+                <div class="row row-cols-5 bg-light  justify-content-between border-top border-bottom border-secondary border-2 w-100 ms-1">
 
-                <div class="row row-cols-5 bg-light justify-content-between">
-
-                    <div class="col col-4 bg-secondary d-flex flex-column">
-                        <span>NOME PASSEGGERO</span>
-                        <span id="name">Jon Snow</span>
+                    <div class="name col col-4 d-flex flex-column p-2 ">
+                        <span class="fs-5 fw-bold">NOME PASSEGGERO</span>
+                        <span id="name" class="fs-5 fw-bold">nome cognome</span>
                     </div>
 
-                    <div class="col col-auto d-flex flex-column">
-                        <span>Offerta</span>
+                    <div class="col col-auto d-flex flex-column py-3 justify-content-between">
+                        <span class="fw-bold">Offerta</span>
                         <span id="ticket-type"></span>
                     </div>
 
-                    <div class="col col-auto d-flex flex-column">
-                        <span>Carrozza</span>
+                    <div class="col col-auto d-flex flex-column py-3 justify-content-between">
+                        <span class="fw-bold">Carrozza</span>
                         <span id="train-carriage">0</span>
                     </div>
 
-                    <div class="col col-auto d-flex flex-column">
-                        <span>Codice CP</span>
-                        <span id="cp-code">92911</span>
+                    <div class="col col-auto d-flex flex-column py-3 justify-content-between">
+                        <span class="fw-bold">Codice CP</span>
+                        <span id="cp-code">00000</span>
                     </div>
 
-                    <div class="col col-auto d-flex flex-column">
-                        <span>Costo biglietto</span>
+                    <div class="col col-auto d-flex flex-column py-3 justify-content-between">
+                        <span class="fw-bold">Costo biglietto</span>
                         <span id="total"></span>
                     </div>
 

@@ -1,0 +1,42 @@
+main{
+    background-color: #b91450;
+    
+}
+
+#container {
+    margin: 0 10rem
+}
+
+h1{
+    color: white;
+    font-weight: bold;
+}
+
+label{
+    color:#b91450;
+    font-weight: 500;
+    padding-bottom: 1rem;
+}
+
+input,
+select{
+    border: solid thin #b91450;
+    font-weight: 500;
+}
+
+button{
+    border: solid thin black;
+    font-weight: bold;
+    color:#b91450;
+    background-color: #cccccc;
+    border-radius: 5px;
+}
+
+button:hover{
+    border: solid  orange;
+}
+
+.name{
+    background-color: #808080;
+    min-height: 8rem;
+}
