@@ -3,7 +3,8 @@ main{
     
 }
 
-#container {
+.container-1,
+.container-2 {
     margin: 0 10rem
 }
 
